@@ -1,4 +1,6 @@
-package com.resnidar.aeroCalc;
+package com.resnidar.aeroCalc.Servlets;
+
+import com.resnidar.aeroCalc.PorteTheoriqueVor;
 
 import java.io.*;
 import javax.servlet.ServletException;
@@ -10,14 +12,14 @@ import javax.servlet.annotation.*;
 public class porteTheoriqueVorServlet extends HttpServlet {
 
         public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            String message = "Hello World!";
-            request.setAttribute("test", message);
             this.getServletContext().getRequestDispatcher("/WEB-INF/porteTheoriqueVor.jsp").forward(request, response);
         }
 
         public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            String message = "Hello World!";
-            request.setAttribute("test", message);
+            PorteTheoriqueVor porteTheoriqueVor = new PorteTheoriqueVor();
+            int altitude = Integer.parseInt(request.getParameter("altitudeEnPied"));
+            int resultat = porteTheoriqueVor.porteTheoriqueVor(altitude);
+            request.setAttribute("test", resultat);
             this.getServletContext().getRequestDispatcher("/WEB-INF/porteTheoriqueVor.jsp").forward(request, response);
         }
 }

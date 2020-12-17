@@ -1,4 +1,4 @@
-package com.resnidar.aeroCalc;
+package com.resnidar.aeroCalc.Servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -32,7 +32,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.jsp">aeroCalcul</a>
+        <a class="navbar-brand" href="/">aeroCalcul</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,8 +44,8 @@
                         calcul
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="porteTheoriqueVor.html">porté théorique VOR</a>
-                        <a class="dropdown-item" href="endurance.html">endurance</a>
+                        <a class="dropdown-item" href="porteTheoriqueVor">porté théorique VOR</a>
+                        <a class="dropdown-item" href="endurance">endurance</a>
                     </div>
                 </li>
                 <li class="nav-item active">
