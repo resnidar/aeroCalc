@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="aeroCalc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>aeroCalc</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="aeroCalc-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="aeroCalc:war exploded" />
+    </root>
+  </artifact>
+</component>
