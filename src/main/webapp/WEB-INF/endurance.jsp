@@ -49,6 +49,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="porteTheoriqueVor">porté théorique VOR</a>
                         <a class="dropdown-item" href="endurance">endurance</a>
+                        <a class="dropdown-item" href="altitudePression">altitude pression</a>
                     </div>
                 </li>
                 <li class="nav-item active">

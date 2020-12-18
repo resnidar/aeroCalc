@@ -32,4 +32,14 @@
         <servlet-name>endurance</servlet-name>
         <url-pattern>/endurance</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>altitudePression</servlet-name>
+        <servlet-class>com.resnidar.aeroCalc.Servlets.AltitudePressionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>altitudePression</servlet-name>
+        <url-pattern>/altitudePression</url-pattern>
+    </servlet-mapping>
 </web-app>
