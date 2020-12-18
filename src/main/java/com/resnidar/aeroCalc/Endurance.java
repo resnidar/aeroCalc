@@ -6,12 +6,12 @@ public class Endurance implements EnduranceInterface{
         float time = 60*carburant / consommation;
         int minute = (int)(time % 60);
         int heure = (int)(time - minute)/60;
-        return "Temps restant :" + heure +"H et " + minute + "min";
+        return "Temps restant: " + heure +"H et " + minute + "min";
     }
 
     @Override
     public int distanceRestant(int carburant, int consommation, int vitesse) {
-        //TODO distance en NM
-        return 100;
+        int dist = (int)(carburant / consommation * vitesse);
+        return dist;
     }
 }
