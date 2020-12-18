@@ -89,12 +89,14 @@
             </form>
             <%
                 Object carburant = request.getAttribute("tempsCarburantRestant");
-                Object consommation = request.getAttribute("distanceRestante");
                 if(carburant != null)
                     out.println(carburant);
+            %>
+            <p><br></p>
+            <%
+                Object consommation = request.getAttribute("distanceRestante");
                 if (consommation != null)
-                    out.println(consommation);
-
+                    out.println("il reste " + consommation + " NM d'autonomie");
             %>
         </div>
     </div>
