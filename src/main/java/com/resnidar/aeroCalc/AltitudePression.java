@@ -1,11 +1,10 @@
 package com.resnidar.aeroCalc;
 
 public class AltitudePression implements AltitudePressionInterface {
-
     @Override
     public int altitudePression(int pression, double temperature) {
-        //TODO altitude par apport a la pression atmo et la temperature
-        return 100;
+           int altitudeD = 12;//(int)(145442.15627*(1-(Math.pow(pression/(temperature+273.15),0.23511))));
+        return altitudeD;
     }
 
     @Override
