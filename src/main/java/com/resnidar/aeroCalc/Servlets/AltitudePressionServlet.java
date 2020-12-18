@@ -1,5 +1,7 @@
 package com.resnidar.aeroCalc.Servlets;
 
+import com.resnidar.aeroCalc.AltitudePression;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +17,12 @@ public class AltitudePressionServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        double temperature = Integer.parseInt(request.getParameter("temperature"));
+        int pression = Integer.parseInt(request.getParameter("pression"));
 
+        AltitudePression altPress = new AltitudePression();
+        int altitude = altPress.altitudePression(pression, temperature);
+        request.setAttribute("altitude", altitude);
         this.getServletContext().getRequestDispatcher("/WEB-INF/altitudePression.jsp").forward(request, response);
     }
 }

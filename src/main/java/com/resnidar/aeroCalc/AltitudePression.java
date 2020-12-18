@@ -1,14 +1,15 @@
 package com.resnidar.aeroCalc;
 
-public class altitudePression implements altitudePressionInterface{
+public class AltitudePression implements AltitudePressionInterface {
 
     @Override
     public int altitudePression(int pression, double temperature) {
-        return 0;
+        //TODO altitude par apport a la pression atmo et la temperature
+        return 100;
     }
 
     @Override
     public int tempPressionStatic(int altitude) {
-        return 0;
+        return 100;
     }
 }

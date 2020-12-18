@@ -71,7 +71,7 @@
             <!-- debut du formulaire-->
 
 
-            <form method="post" action="porteTheoriqueVor">
+            <form method="post" action="altitudePression">
                 <div class="form-group">
                     <p class="text-center">temperature</p>
                     <input type="number" class="form-control" id="temperature" name="temperature"
@@ -87,21 +87,13 @@
             </form>
 
             <!-- fin du formulaire-->
-
+            <%
+                Object altitude = request.getAttribute("altitude");
+                if(altitude != null)
+                out.println(altitude);
+            %>
         </div>
     </div>
-
-    <%
-        Object reponse = request.getAttribute("test");
-        if(reponse == null)
-        {
-        }
-        else{
-            out.println("resultat :");
-            out.println(reponse + " NM");
-        }
-    %>
-
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
