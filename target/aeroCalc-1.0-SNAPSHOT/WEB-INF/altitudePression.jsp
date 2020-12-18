@@ -73,9 +73,15 @@
 
             <form method="post" action="porteTheoriqueVor">
                 <div class="form-group">
-                    <p class="text-center">altitude en pied</p>
-                    <input type="number" class="form-control" id="altitudeEnPied" name="altitudeEnPied" aria-describedby="permet d'entré
-                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entré altitude en pied">
+                    <p class="text-center">temperature</p>
+                    <input type="number" class="form-control" id="temperature" name="temperature"
+                           aria-describedby="entré de la temperature static" placeholder="entré la temperature static en C°">
+                </div>
+
+                <div class="form-group">
+                    <p class="text-center">pression</p>
+                    <input type="number" class="form-control" id="pression" name="pression"
+                           aria-describedby="pression static en hPa" placeholder="entré pression static en hPa">
                 </div>
                 <button type="submit" class="btn btn-primary">envoyé</button>
             </form>
@@ -103,3 +109,4 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
