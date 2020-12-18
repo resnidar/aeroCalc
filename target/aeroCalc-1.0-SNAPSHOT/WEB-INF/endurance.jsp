@@ -8,7 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>main</title>
 </head>
@@ -33,14 +34,16 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">aeroCalcul</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         calcul
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -65,18 +68,33 @@
 
     <div class="row  align-items, flex-direction: column border">
         <div class="col">
-            <form>
+            <form method="post" action="endurance">
                 <div class="form-group">
                     <p class="text-center">quantité carburant</p>
-                    <input type="text" class="form-control" id="quantiteCarburant" aria-describedby="carburant a bord" placeholder="quantité de carburant a bord">
+                    <input type="number" class="form-control" id="quantiteCarburant" name="quantiteCarburant"
+                           aria-describedby="carburant a bord" placeholder="quantité de carburant a bord">
                 </div>
                 <div class="form-group">
                     <p class="text-center">consommation l/h</p>
-                    <input type="text" class="form-control" id="consommationHeure" aria-describedby="consommation par heure" placeholder="consommation en l/h">
+                    <input type="number" class="form-control" id="consommationHeure" name="consommationHeure"
+                           aria-describedby="consommation par heure" placeholder="consommation en l/h">
+                </div>
+                <div class="form-group">
+                    <p class="text-center">vitesse en noeud</p>
+                   <input type="number" class="form-control" id="vitesse" name="vitesse" aria-describedby="vitesse"
+                           placeholder="vitesse en noeud">
                 </div>
 
                 <button type="submit" class="btn btn-primary">envoyé</button>
             </form>
+            <%
+                Object carburant = request.getAttribute("quantiteCarburant");
+                Object consommation = request.getAttribute("consommationHeure");
+                Object vitesse = request.getAttribute("vitesse");
+                out.println(carburant);
+                out.println(consommation);
+                out.println(vitesse);
+            %>
         </div>
     </div>
 

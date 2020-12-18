@@ -23,4 +23,3 @@ public class porteTheoriqueVorServlet extends HttpServlet {
             this.getServletContext().getRequestDispatcher("/WEB-INF/porteTheoriqueVor.jsp").forward(request, response);
         }
 }
-

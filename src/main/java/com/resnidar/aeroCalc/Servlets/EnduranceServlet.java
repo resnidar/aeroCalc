@@ -9,13 +9,21 @@ import java.io.IOException;
 
 @WebServlet(name = "EnduranceServlet")
 public class EnduranceServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/endurance.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        this.getServletContext().getRequestDispatcher("/WEB-INF/endurance.jsp").forward(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/endurance.jsp").forward(request, response);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int carburant = Integer.parseInt(request.getParameter("quantiteCarburant"));
+        int consommation = Integer.parseInt(request.getParameter("consommationHeure"));
+        int vitesse = Integer.parseInt(request.getParameter("vitesse"));
 
+
+        String tempsCarburantRestant;
+        int distanceRestante;
+        //request.setAttribute("tempsCarburantRestant", tempsCarburantRestant);
+        //request.setAttribute("distanceRestante", distanceRestante);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/endurance.jsp").forward(request, response);
     }
 }

@@ -10,6 +10,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>main</title>
 </head>
 <body>
@@ -72,7 +73,7 @@
             <form method="post" action="porteTheoriqueVor">
                 <div class="form-group">
                     <p class="text-center">altitude en pied</p>
-                    <input type="text" class="form-control" id="altitudeEnPied" name="altitudeEnPied" aria-describedby="permet d'entré
+                    <input type="number" class="form-control" id="altitudeEnPied" name="altitudeEnPied" aria-describedby="permet d'entré
                      l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entré altitude en pied">
                 </div>
                 <button type="submit" class="btn btn-primary">envoyé</button>
@@ -82,14 +83,16 @@
 
         </div>
     </div>
-    <p>voila la réponse : </p>
+
     <%
         Object reponse = request.getAttribute("test");
         if(reponse == null)
         {
         }
-        else
+        else{
+            out.println("resultat :");
             out.println(reponse + " NM");
+        }
     %>
 
 
