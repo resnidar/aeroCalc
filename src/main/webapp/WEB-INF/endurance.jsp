@@ -88,12 +88,13 @@
                 <button type="submit" class="btn btn-primary">envoyé</button>
             </form>
             <%
-                Object carburant = request.getAttribute("quantiteCarburant");
-                Object consommation = request.getAttribute("consommationHeure");
-                Object vitesse = request.getAttribute("vitesse");
-                out.println(carburant);
-                out.println(consommation);
-                out.println(vitesse);
+                Object carburant = request.getAttribute("tempsCarburantRestant");
+                Object consommation = request.getAttribute("distanceRestante");
+                if(carburant != null)
+                    out.println(carburant);
+                if (consommation != null)
+                    out.println(consommation);
+
             %>
         </div>
     </div>
