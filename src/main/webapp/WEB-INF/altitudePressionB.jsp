@@ -90,10 +90,16 @@
 
                 <%
                     Object pression = request.getAttribute("pression");
-                    Object temperature = request.getAttribute("temperature");
                     if(pression != null){
-                        out.println("altitude/densité : ");
+                        out.println("pression en hPA : ");
                         out.println(pression);
+                    }
+                %>
+                <p></p>
+                <%
+                    Object temperature = request.getAttribute("temperature");
+                    if(temperature != null){
+                        out.println("temperature en C° : ");
                         out.println(temperature);
                     }
                 %>
