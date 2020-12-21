@@ -67,47 +67,41 @@
     <p></p>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="altitudePression">altitudePression suivant temperature et pression en hPa</a>
+            <a class="nav-link" aria-current="page" href="altitudePression">altitudePression suivant temperature et pression en hPa</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="altitudePressionB">calcul pression et temperature suivant altitude</a>
+            <a class="nav-link active" href="altitudePressionB">calcul pression et temperature suivant altitude</a>
         </li>
     </ul>
 
-    <div class="row  align-items, flex-direction: column border">
-        <div class="col border">
-
-            <!-- debut du formulaire-->
+    <!-- debut du formulaire-->
 
 
-            <form method="post" action="altitudePression">
-                <div class="form-group">
-                    <p class="text-center">temperature</p>
-                    <input type="number" class="form-control" id="temperature" name="temperature"
-                           aria-describedby="entré de la temperature static" placeholder="entré la temperature static en C°">
-                </div>
+            <div class="col border">
+                <form method="post" action="altitudePressionB">
+                    <div class="form-group">
+                        <p class="text-center">altitude en pied</p>
+                        <input type="number" class="form-control" id="altitude" name="altitude"
+                               aria-describedby="altitude en pied" placeholder="altitude en pied">
+                    </div>
 
-                <div class="form-group">
-                    <p class="text-center">pression</p>
-                    <input type="number" class="form-control" id="pression" name="pression"
-                           aria-describedby="pression static en hPa" placeholder="entré pression static en hPa">
-                </div>
-                <button type="submit" class="btn btn-primary">envoyé</button>
-            </form>
+                    <button type="submit" class="btn btn-primary">envoyé</button>
+                </form>
 
-            <!-- fin du formulaire-->
+                <%
+                    Object pression = request.getAttribute("pression");
+                    Object temperature = request.getAttribute("temperature");
+                    if(pression != null){
+                        out.println("altitude/densité : ");
+                        out.println(pression);
+                        out.println(temperature);
+                    }
+                %>
+            </div>
+</div>
 
 
-            <%
-                Object altitude = request.getAttribute("altitude");
-                if(altitude != null){
-                    out.println("altitude/densité : ");
-                    out.println(altitude);
-                }
-            %>
-        </div>
-
-    </div>
+</div>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -115,4 +109,3 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
-

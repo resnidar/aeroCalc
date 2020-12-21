@@ -21,8 +21,9 @@ public class AltitudePressionServlet extends HttpServlet {
         int pression = Integer.parseInt(request.getParameter("pression"));
 
         AltitudePression altPress = new AltitudePression();
-        int altitude = altPress.altitudePression(pression, temperature);
-        request.setAttribute("altitude", altitude);
+        int altitudePression = altPress.altitudePression(pression, temperature);
+        request.setAttribute("altitude", altitudePression);
+
         this.getServletContext().getRequestDispatcher("/WEB-INF/altitudePression.jsp").forward(request, response);
     }
 }

@@ -42,4 +42,14 @@
         <servlet-name>altitudePression</servlet-name>
         <url-pattern>/altitudePression</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>altitudePressionB</servlet-name>
+        <servlet-class>com.resnidar.aeroCalc.Servlets.AltitudePressionBServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>altitudePressionB</servlet-name>
+        <url-pattern>/altitudePressionB</url-pattern>
+    </servlet-mapping>
 </web-app>
