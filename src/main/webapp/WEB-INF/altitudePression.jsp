@@ -64,9 +64,18 @@
 
     <!-- fin de la navbar-->
 
+    <p></p>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="altitudePression">altitudePression suivant temperature et pression en hPa</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="altitudePressionB">calcul pression et temperature suivant altitude</a>
+        </li>
+    </ul>
 
     <div class="row  align-items, flex-direction: column border">
-        <div class="col">
+        <div class="col border">
 
             <!-- debut du formulaire-->
 
@@ -87,12 +96,17 @@
             </form>
 
             <!-- fin du formulaire-->
+
+
             <%
                 Object altitude = request.getAttribute("altitude");
-                if(altitude != null)
-                out.println(altitude);
+                if(altitude != null){
+                    out.println("altitude/densité : ");
+                    out.println(altitude);
+                }
             %>
         </div>
+
     </div>
 
 </div>

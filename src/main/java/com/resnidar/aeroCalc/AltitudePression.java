@@ -6,8 +6,13 @@ public class AltitudePression  {
        return altitudeD;
     }
 
-    @Override
-    public int tempPressionStatic(int altitude) {
+    public int pressionSuivantAltitude(int altitude) {
+        //TODO : calcul de la pression suivant altitude
+        return 100;
+    }
+
+    public int temperatureSuivantAltitude(int altitude){
+        //TODO : calcul de la temperature suivant l'altitude
         return 100;
     }
 }
