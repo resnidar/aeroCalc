@@ -13,6 +13,7 @@ public class AltitudePression  {
 
     public int temperatureSuivantAltitude(int altitude){
         //TODO : calcul de la temperature suivant l'altitude
-        return 100;
+            int temperature = (int)(15-6.5*(altitude*0.0003048));
+        return temperature;
     }
 }
