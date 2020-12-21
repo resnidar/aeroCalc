@@ -8,7 +8,8 @@ public class AltitudePression  {
 
     public int pressionSuivantAltitude(int altitude) {
         //TODO : calcul de la pression suivant altitude
-        return 100;
+        int pression = (int)(1013.2*Math.pow(((31-(altitude*0.0003048))/(31+(altitude*0.0003048))),2));
+        return pression;
     }
 
     public int temperatureSuivantAltitude(int altitude){
