@@ -17,9 +17,11 @@ public class CalculVentTraversServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CalculVentTravers ventTravers = new CalculVentTravers();
+
         int directionVent = Integer.parseInt(request.getParameter("directionVent"));
         double forceVent = Double.parseDouble(request.getParameter("forceVent"));
         int directionAvion = Integer.parseInt(request.getParameter("directionAvion"));
+
         double ventAvant = ventTravers.ventAvant(directionVent, forceVent, directionAvion);
         double ventDroit = ventTravers.ventDroit(directionVent, forceVent, directionAvion);
         double ventArriere = ventTravers.ventArriere(directionVent, forceVent,directionAvion);
