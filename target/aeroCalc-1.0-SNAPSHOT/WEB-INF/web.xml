@@ -52,4 +52,14 @@
         <servlet-name>altitudePressionB</servlet-name>
         <url-pattern>/altitudePressionB</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>calculVentTravers</servlet-name>
+        <servlet-class>com.resnidar.aeroCalc.Servlets.CalculVentTraversServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>calculVentTravers</servlet-name>
+        <url-pattern>/calculVentTravers</url-pattern>
+    </servlet-mapping>
 </web-app>
