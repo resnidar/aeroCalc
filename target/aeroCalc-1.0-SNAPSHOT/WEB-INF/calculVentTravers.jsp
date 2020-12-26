@@ -90,7 +90,7 @@
 
     <%
         Object ventAvant = request.getAttribute("ventAvant");
-        Object ventDroit = request.getAttribute("ventDroite");
+        Object ventDroit = request.getAttribute("ventDroit");
         Object ventArriere = request.getAttribute("ventArriere");
         Object ventGauche = request.getAttribute("ventGauche");
         //if(ventAvant == null)
