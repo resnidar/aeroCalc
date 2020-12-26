@@ -1,8 +1,16 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: rerem2
+  Date: 17/12/2020
+  Time: 17:38
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>main</title>
 </head>
 <body>
@@ -22,8 +30,6 @@
     <!-- debut de la navbar-->
 
 
-
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">aeroCalcul</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +46,6 @@
                         <a class="dropdown-item" href="porteTheoriqueVor">porté théorique VOR</a>
                         <a class="dropdown-item" href="endurance">endurance</a>
                         <a class="dropdown-item" href="altitudePression">altitude pression</a>
-                        <a class="dropdown-item" href="calculVentTravers">Calcul vent travers</a>
                     </div>
                 </li>
                 <li class="nav-item active">
@@ -60,9 +65,45 @@
 
     <div class="row  align-items, flex-direction: column border">
         <div class="col">
-            <p class="text-center align-items-center">les calculs seront ici</p>
+
+            <!-- debut du formulaire-->
+
+
+            <form method="post" action="calculVentTravers">
+                <div class="form-group">
+                    <p class="text-center">calcul vent de travers</p>
+                    <input type="number" class="form-control" id="directionVent" name="directionVent" aria-describedby="la direction du vent"
+                           placeholder="direction du vent en °">
+                    <input type="number" class="form-control" id="forceVent" name="forceVent" aria-describedby="la direction du vent"
+                           placeholder="force du vent en kts">
+                    <input type="number" class="form-control" id="directionAvion" name="directionAvion" aria-describedby="la direction du vent"
+                           placeholder="direction de l'avion en °">
+                </div>
+                <button type="submit" class="btn btn-primary">envoyé</button>
+            </form>
+
+            <!-- fin du formulaire-->
+
         </div>
     </div>
+
+    <%
+        Object ventAvant = request.getAttribute("ventAvant");
+        Object ventDroit = request.getAttribute("ventDroite");
+        Object ventArriere = request.getAttribute("ventArriere");
+        Object ventGauche = request.getAttribute("ventGauche");
+        //if(ventAvant == null)
+        //{
+        //}
+        //else{
+
+            out.println("vent avant : " + ventAvant);
+            out.println("vent droit : " + ventDroit);
+            out.println("vent arriere : " + ventArriere);
+            out.println("vent gauche : " + ventGauche);
+        //}
+    %>
+
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
