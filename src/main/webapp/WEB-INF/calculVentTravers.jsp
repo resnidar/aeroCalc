@@ -93,31 +93,47 @@
         Object ventDroit = request.getAttribute("ventDroit");
         Object ventArriere =  request.getAttribute("ventArriere");
         Object ventGauche =  request.getAttribute("ventGauche");
+        double ventAvantDouble = -1;
+        double ventDroitDouble = -1;
+        double ventArriereDouble = -1;
+        double ventGaucheDouble = -1;
 
-        double ventAvantDouble = (double) request.getAttribute("ventAvant");
-        double ventDroitDouble = (double) request.getAttribute("ventDroit");
-        double ventArriereDouble = (double) request.getAttribute("ventArriere");
-        double ventGaucheDouble = (double) request.getAttribute("ventGauche");
 
-        if (ventAvant == null || ventAvantDouble < 0) {
+        if (ventAvant != null) {
+             ventAvantDouble = (double) ventAvant;
+        }
+
+        if (ventDroit != null) {
+             ventDroitDouble = (double) ventDroit;
+        }
+
+        if (ventArriere != null) {
+             ventArriereDouble = (double) ventArriere;
+        }
+
+        if (ventGauche != null) {
+             ventGaucheDouble = (double) ventGauche;
+        }
+
+        if (ventAvant == null || ventAvantDouble <= 0) {
         } else {
-            out.print("vent avant : " + ventAvant );
+            out.print("     // vent avant : " + ventAvant );
         }
-        %> <br> <%
-        if (ventDroit == null || ventDroitDouble < 0){
-        }
-        else
-            out.print("vent droit : " + ventDroit + "\n");
-        %> <br> <%
-        if (ventArriere == null || ventArriereDouble < 0){
+
+        if (ventDroit == null || ventDroitDouble <= 0){
         }
         else
-            out.print("vent arriere : " + ventArriere + "\n");
-        %> <br> <%
-        if (ventGauche == null || ventGaucheDouble < 0){
+            out.print("     // vent droit : " + ventDroit);
+
+        if (ventArriere == null || ventArriereDouble <= 0){
         }
         else
-            out.print("vent gauche : " + ventGauche);
+            out.print("     // vent arriere : " + ventArriere);
+
+        if (ventGauche == null || ventGaucheDouble <= 0){
+        }
+        else
+            out.print("     // vent gauche : " + ventGauche);
     %>
 
 
