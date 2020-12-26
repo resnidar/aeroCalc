@@ -91,18 +91,33 @@
     <%
         Object ventAvant = request.getAttribute("ventAvant");
         Object ventDroit = request.getAttribute("ventDroit");
-        Object ventArriere = request.getAttribute("ventArriere");
-        Object ventGauche = request.getAttribute("ventGauche");
-        //if(ventAvant == null)
-        //{
-        //}
-        //else{
+        Object ventArriere =  request.getAttribute("ventArriere");
+        Object ventGauche =  request.getAttribute("ventGauche");
 
-            out.println("vent avant : " + ventAvant);
-            out.println("vent droit : " + ventDroit);
-            out.println("vent arriere : " + ventArriere);
-            out.println("vent gauche : " + ventGauche);
-        //}
+        double ventAvantDouble = (double) request.getAttribute("ventAvant");
+        double ventDroitDouble = (double) request.getAttribute("ventDroit");
+        double ventArriereDouble = (double) request.getAttribute("ventArriere");
+        double ventGaucheDouble = (double) request.getAttribute("ventGauche");
+
+        if (ventAvant == null || ventAvantDouble < 0) {
+        } else {
+            out.print("vent avant : " + ventAvant );
+        }
+        %> <br> <%
+        if (ventDroit == null || ventDroitDouble < 0){
+        }
+        else
+            out.print("vent droit : " + ventDroit + "\n");
+        %> <br> <%
+        if (ventArriere == null || ventArriereDouble < 0){
+        }
+        else
+            out.print("vent arriere : " + ventArriere + "\n");
+        %> <br> <%
+        if (ventGauche == null || ventGaucheDouble < 0){
+        }
+        else
+            out.print("vent gauche : " + ventGauche);
     %>
 
 
