@@ -47,6 +47,7 @@
                         <a class="dropdown-item" href="endurance">endurance</a>
                         <a class="dropdown-item" href="altitudePression">altitude pression</a>
                         <a class="dropdown-item" href="calculVentTravers">Calcul vent travers</a>
+                        <a class="dropdown-item" href="TODTemps">TODTemps</a>
                     </div>
                 </li>
                 <li class="nav-item active">
@@ -72,11 +73,17 @@
 
             <form method="post" action="calculVentTravers">
                 <div class="form-group">
-                    <p class="text-center">calcul vent de travers</p>
+                    <p class="text-center">direction du vent</p>
                     <input type="number" class="form-control" id="directionVent" name="directionVent" aria-describedby="la direction du vent"
                            placeholder="direction du vent en °">
+                </div>
+                <div class="form-group">
+                    <p class="text-center">force du vent</p>
                     <input type="number" class="form-control" id="forceVent" name="forceVent" aria-describedby="la direction du vent"
                            placeholder="force du vent en kts">
+                </div>
+                <div class="form-group">
+                    <p class="text-center">direction de l'avion</p>
                     <input type="number" class="form-control" id="directionAvion" name="directionAvion" aria-describedby="la direction du vent"
                            placeholder="direction de l'avion en °">
                 </div>

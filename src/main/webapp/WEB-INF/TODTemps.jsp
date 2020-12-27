@@ -66,50 +66,47 @@
 
     <!-- fin de la navbar-->
 
-    <p></p>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="altitudePression">altitudePression suivant temperature et pression en hPa</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="altitudePressionB">calcul pression et temperature suivant altitude</a>
-        </li>
-    </ul>
 
     <div class="row  align-items, flex-direction: column border">
-        <div class="col border">
+        <div class="col">
 
             <!-- debut du formulaire-->
 
 
-            <form method="post" action="altitudePression">
+            <form method="post" action="TODTemps">
                 <div class="form-group">
-                    <p class="text-center">temperature</p>
-                    <input type="number" class="form-control" id="temperature" name="temperature"
-                           aria-describedby="entré de la temperature static" placeholder="entré la temperature static en C°">
+                    <p class="text-center">altitude actuel en pieds</p>
+                    <input type="number" class="form-control" id="altitudeActuel" name="altitudeActuel" aria-describedby="permet d'entré
+                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entré altitude actuel en pied">
                 </div>
-
                 <div class="form-group">
-                    <p class="text-center">pression</p>
-                    <input type="number" class="form-control" id="pression" name="pression"
-                           aria-describedby="pression static en hPa" placeholder="entré pression static en hPa">
+                    <p class="text-center">altitudeDésiré</p>
+                    <input type="number" class="form-control" id="altitudeDesire" name="altitudeDesire" aria-describedby="permet d'entré
+                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entré altitude désiré en pied">
+                </div>
+                <div class="form-group">
+                    <p class="text-center">vitesseVertical</p>
+                    <input type="number" class="form-control" id="vitesseVertical" name="vitesseVertical" aria-describedby="permet d'entré
+                     la vitesse vertical pour le calcul du top descente" placeholder="entré la vitesse vertical désiré">
                 </div>
                 <button type="submit" class="btn btn-primary">envoyé</button>
             </form>
 
             <!-- fin du formulaire-->
 
-
-            <%
-                Object altitude = request.getAttribute("altitude");
-                if(altitude != null){
-                    out.println("altitude/densité : ");
-                    out.println(altitude);
-                }
-            %>
         </div>
-
     </div>
+
+    <%
+        Object temps = request.getAttribute("temps");
+        if(temps == null)
+        {
+        }
+        else{
+            out.println(temps + " minutes");
+        }
+    %>
+
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -117,4 +114,3 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
-
