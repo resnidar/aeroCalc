@@ -20,8 +20,10 @@ public class TODTempsServlet extends HttpServlet {
         int vitesseVertical = Integer.parseInt(request.getParameter("vitesseVertical"));
 
         TODTemps todTemps = new TODTemps();
-        int temps = todTemps.todtempsMin(altitudeActuel, altitudeDesire, vitesseVertical);
-        request.setAttribute("temps", temps);
+        int min = todTemps.todtempsMin(altitudeActuel, altitudeDesire, vitesseVertical);
+        request.setAttribute("min", min);
+        int sec = todTemps.todtempsSec(altitudeActuel, altitudeDesire, vitesseVertical);
+        request.setAttribute("sec", sec);
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/TODTemps.jsp").forward(request, response);
     }

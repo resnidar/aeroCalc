@@ -62,4 +62,14 @@
         <servlet-name>calculVentTravers</servlet-name>
         <url-pattern>/calculVentTravers</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TODTemps</servlet-name>
+        <servlet-class>com.resnidar.aeroCalc.Servlets.TODTempsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TODTemps</servlet-name>
+        <url-pattern>/TODTemps</url-pattern>
+    </servlet-mapping>
 </web-app>

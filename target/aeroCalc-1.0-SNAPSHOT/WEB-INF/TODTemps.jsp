@@ -98,12 +98,14 @@
     </div>
 
     <%
-        Object temps = request.getAttribute("temps");
-        if(temps == null)
+        Object min = request.getAttribute("min");
+        Object sec = request.getAttribute("sec");
+        if(min == null && sec == null)
         {
         }
         else{
-            out.println(temps + " minutes");
+            out.println(min + " minutes et ");
+            out.println(sec + " seconde");
         }
     %>
 
