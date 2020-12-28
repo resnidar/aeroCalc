@@ -87,7 +87,7 @@
                 <div class="form-group">
                     <p class="text-center">vitesse vertical</p>
                     <input type="number" class="form-control" id="vitesseVertical" name="vitesseVertical" aria-describedby="permet d'entré
-                     la vitesse vertical pour le calcul du top descente" placeholder="entrer la vitesse vertical désiré">
+                     la vitesse vertical pour le calcul du top descente" placeholder="entrer la vitesse vertical désirée">
                 </div>
                 <button type="submit" class="btn btn-primary">envoyer</button>
             </form>
