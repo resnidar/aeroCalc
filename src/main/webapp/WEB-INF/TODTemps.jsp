@@ -75,17 +75,17 @@
 
             <form method="post" action="TODTemps">
                 <div class="form-group">
-                    <p class="text-center">altitude actuel en pieds</p>
+                    <p class="text-center">altitude actuelle en pieds</p>
                     <input type="number" class="form-control" id="altitudeActuel" name="altitudeActuel" aria-describedby="permet d'entré
-                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entrer altitude actuel en pied">
+                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entrer altitude actuelle en pied">
                 </div>
                 <div class="form-group">
-                    <p class="text-center">altitudeDésiré</p>
+                    <p class="text-center">altitude désiré</p>
                     <input type="number" class="form-control" id="altitudeDesire" name="altitudeDesire" aria-describedby="permet d'entré
                      l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entrer altitude désiré en pied">
                 </div>
                 <div class="form-group">
-                    <p class="text-center">vitesseVertical</p>
+                    <p class="text-center">vitesse vertical</p>
                     <input type="number" class="form-control" id="vitesseVertical" name="vitesseVertical" aria-describedby="permet d'entré
                      la vitesse vertical pour le calcul du top descente" placeholder="entrer la vitesse vertical désiré">
                 </div>
