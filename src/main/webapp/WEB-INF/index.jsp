@@ -8,7 +8,7 @@
 <body>
 <div class="jumbotron jumbotron-fluid">
     <div class="container-fluid">
-        <h1 class="display-4 text-center">aeroCalc</h1>
+        <h1 class="display-4 text-center">AeroCalc</h1>
     </div>
 </div>
 
@@ -25,7 +25,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">aeroCalcul</a>
+        <a class="navbar-brand" href="/">AeroCalc</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,7 +39,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="porteTheoriqueVor">porté théorique VOR</a>
                         <a class="dropdown-item" href="endurance">endurance</a>
-                        <a class="dropdown-item" href="altitudePression">altitude pression</a>
+                        <a class="dropdown-item" href="altitudePression">altitude densité</a>
                         <a class="dropdown-item" href="calculVentTravers">Calcul vent travers</a>
                         <a class="dropdown-item" href="TODTemps">TODTemps</a>
                     </div>

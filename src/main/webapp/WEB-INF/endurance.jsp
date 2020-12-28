@@ -16,7 +16,7 @@
 <body>
 <div class="jumbotron jumbotron-fluid">
     <div class="container-fluid">
-        <h1 class="display-4 text-center">aeroCalc</h1>
+        <h1 class="display-4 text-center">AeroCalc</h1>
     </div>
 </div>
 
@@ -33,7 +33,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">aeroCalcul</a>
+        <a class="navbar-brand" href="/">AeroCalc</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="porteTheoriqueVor">porté théorique VOR</a>
                         <a class="dropdown-item" href="endurance">endurance</a>
-                        <a class="dropdown-item" href="altitudePression">altitude pression</a>
+                        <a class="dropdown-item" href="altitudePression">altitude densité</a>
                         <a class="dropdown-item" href="calculVentTravers">Calcul vent travers</a>
                         <a class="dropdown-item" href="TODTemps">TODTemps</a>
                     </div>
@@ -75,7 +75,7 @@
                 <div class="form-group">
                     <p class="text-center">quantité carburant</p>
                     <input type="number" class="form-control" id="quantiteCarburant" name="quantiteCarburant"
-                           aria-describedby="carburant a bord" placeholder="quantité de carburant a bord">
+                           aria-describedby="carburant a bord" placeholder="quantité de carburant à bord">
                 </div>
                 <div class="form-group">
                     <p class="text-center">consommation l/h</p>
@@ -88,7 +88,7 @@
                            placeholder="vitesse en noeud">
                 </div>
 
-                <button type="submit" class="btn btn-primary">envoyé</button>
+                <button type="submit" class="btn btn-primary">envoyer</button>
             </form>
             <%
                 Object carburant = request.getAttribute("tempsCarburantRestant");

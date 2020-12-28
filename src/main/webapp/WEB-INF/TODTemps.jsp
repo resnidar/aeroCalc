@@ -16,7 +16,7 @@
 <body>
 <div class="jumbotron jumbotron-fluid">
     <div class="container-fluid">
-        <h1 class="display-4 text-center">aeroCalc</h1>
+        <h1 class="display-4 text-center">AeroCalc</h1>
     </div>
 </div>
 
@@ -33,7 +33,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">aeroCalcul</a>
+        <a class="navbar-brand" href="/">AeroCalc</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,7 +47,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="porteTheoriqueVor">porté théorique VOR</a>
                         <a class="dropdown-item" href="endurance">endurance</a>
-                        <a class="dropdown-item" href="altitudePression">altitude pression</a>
+                        <a class="dropdown-item" href="altitudePression">altitude densité</a>
                         <a class="dropdown-item" href="calculVentTravers">Calcul vent travers</a>
                         <a class="dropdown-item" href="TODTemps">TODTemps</a>
                     </div>
@@ -77,19 +77,19 @@
                 <div class="form-group">
                     <p class="text-center">altitude actuel en pieds</p>
                     <input type="number" class="form-control" id="altitudeActuel" name="altitudeActuel" aria-describedby="permet d'entré
-                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entré altitude actuel en pied">
+                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entrer altitude actuel en pied">
                 </div>
                 <div class="form-group">
                     <p class="text-center">altitudeDésiré</p>
                     <input type="number" class="form-control" id="altitudeDesire" name="altitudeDesire" aria-describedby="permet d'entré
-                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entré altitude désiré en pied">
+                     l'altitude en pied pour le calcul de la porté théorique du vor" placeholder="entrer altitude désiré en pied">
                 </div>
                 <div class="form-group">
                     <p class="text-center">vitesseVertical</p>
                     <input type="number" class="form-control" id="vitesseVertical" name="vitesseVertical" aria-describedby="permet d'entré
-                     la vitesse vertical pour le calcul du top descente" placeholder="entré la vitesse vertical désiré">
+                     la vitesse vertical pour le calcul du top descente" placeholder="entrer la vitesse vertical désiré">
                 </div>
-                <button type="submit" class="btn btn-primary">envoyé</button>
+                <button type="submit" class="btn btn-primary">envoyer</button>
             </form>
 
             <!-- fin du formulaire-->
