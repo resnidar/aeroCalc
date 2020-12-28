@@ -7,7 +7,7 @@ public class TODTemps {
         return min;
     }
     public int todtempsSec(int altitudeActuel, int altitudeDesire, int vitesseVertical){
-        int sec = ((altitudeActuel - altitudeDesire) / (vitesseVertical/60))%60;
+        int sec = (int)((altitudeActuel - altitudeDesire) / ((double)vitesseVertical/60))%60;
         return sec;
     }
 }
