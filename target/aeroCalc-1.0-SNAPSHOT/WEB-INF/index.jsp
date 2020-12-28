@@ -41,6 +41,7 @@
                         <a class="dropdown-item" href="endurance">endurance</a>
                         <a class="dropdown-item" href="altitudePression">altitude pression</a>
                         <a class="dropdown-item" href="calculVentTravers">Calcul vent travers</a>
+                        <a class="dropdown-item" href="TODTemps">TODTemps</a>
                     </div>
                 </li>
                 <li class="nav-item active">
@@ -60,7 +61,7 @@
 
     <div class="row  align-items, flex-direction: column border">
         <div class="col">
-            <p class="text-center align-items-center">les calculs seront ici</p>
+            <p class="text-center align-items-center">les calculs seront </p>
         </div>
     </div>
 
